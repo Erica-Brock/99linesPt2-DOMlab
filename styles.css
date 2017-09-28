@@ -1,0 +1,35 @@
+*{box-sizing: border-box;}
+body{
+    background-color:#e2d3e2;
+}
+h1{
+    color:#360438;
+    text-align: center;
+}
+.friends{
+    background-color: #360438;
+    color:#e2d3e2;
+    width:90%;
+    margin: 0 auto;
+}
+.friends p{
+    text-transform: uppercase;
+}
+.row{
+    width:85%;
+    height:20em;
+    margin: 0 auto;
+    padding:0;
+
+}
+.col{
+    display: inline-block;
+    text-align: center;
+    width:18%;
+    height: 19em;
+    margin:0 auto;
+    padding:0;
+    position: relative;
+    top:.5em;
+    border: solid #e2d3e2 thick;
+}
