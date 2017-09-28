@@ -15,14 +15,14 @@ h1{
 .friends h3{
     text-transform: uppercase;
 }
-.row{
+/*.row{
     width:85%;
     height:20em;
     margin: 0 auto;
-    padding:0;
+    padding:0;*/
 
 }
-.col{
+/*.col{
     display: inline-block;
     text-align: center;
     width:18%;
@@ -31,5 +31,8 @@ h1{
     padding:0;
     position: relative;
     top:.5em;
-    border: solid #e2d3e2 thick;
+    border: solid #e2d3e2 thick;*/
+}
+#sing-btn{
+    color:red;
 }

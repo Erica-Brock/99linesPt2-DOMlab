@@ -1,18 +1,3 @@
-/*var friends=["Kiara", "Kirsten", "Tyffani", "Jeff", "Brandon"];
-function sing(friend){
-    console.log (friend +":")
-    for(var i=99; i>1; i--){
-        console.log( i + " lines of code in the file,", i + " lines of code; " , friend ," strikes one out clears it all out", i-1 +" lines of code in the file.");
-    }
-    console.log("1 line of code in the file, 1 line of code;", friend +" strikes one out, clears it all out, no more lines of code in the file." );
-}
-function callFriend(friends){
-    for(var i=0; i<friends.length ; i++){
-        sing(friends[i]);
-    }
-}
-
-callFriend(friends);*/
 
 document.addEventListener("DOMContentLoaded", function () {
     var friends = ["Tyffani", "Kiara", "Kirsten", "Jeff", "Brandon"];
@@ -33,18 +18,27 @@ document.addEventListener("DOMContentLoaded", function () {
             friendName.appendChild(name);
             friendContainer.appendChild(friendName);
             document.body.appendChild(friendContainer);
-           friendContainer.class="friends";
+           friendContainer.className="friends";
            friendName.id="name";
             for (var e = 99; e > 0; e--) {
-                if (e > 2) {
-                    console.log(e + " lines of code in the file", e + " lines of code", friends[i] + " takes one out, clears it all out,", e - 1 + " lines of code in the file.");
+                if (e > 2) {                
+                    var para=document.createElement('p');
+                    var song=document.createTextNode(e + " lines of code in the file "+ e+ " lines of code "+ friends[i] + " takes one out, clears it all out, "+ (e - 1) + " lines of code in the file.");
+                    para.appendChild(song);
+                    friendContainer.appendChild(para);                    
                 }
-                else if (e === 2) {
-                    console.log(e + " lines of code in the file", e + " lines of code", friends[i] + " takes one out, clears it all out,", e - 1 + " line of code in the file.");
+                else if (e ===2) {
+                    var para=document.createElement('p');
+                    var song=document.createTextNode(e + " lines of code in the file "+ e+ " lines of code "+ friends[i] + " takes one out, clears it all out, "+ (e - 1) + " line of code in the file. ");
+                    para.appendChild(song);
+                    friendContainer.appendChild(para); 
                 }
 
                 else if (e===1){
-                    console.log("1 line of code in the file, 1 line of code;", friends[i] + " takes one out, clears it all out, no more lines of code in the file.");
+                    var para=document.createElement('p');
+                    var song=document.createTextNode(" 1 line of code in the file, 1 line of code; "+ friends[i] + " takes one out, clears it all out, no more lines of code in the file.");
+                    para.appendChild(song);
+                    friendContainer.appendChild(para);                   
                 }
 
 
@@ -52,24 +46,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 })
-/* This way will work as well and is much easier:
-
-
-var friends=["Tyffani", "Kiara", "Kirsten", "Jeff", "Brandon"];
-for (var i = 0; i < friends.length; i++) {
-    console.log(friends[i] + ":");
-    for (var e = 99; e>1; e--) {
-                if (e = 1) {
-            console.log("1 line of code in the file, 1 line of code;", i + " takes one out, clears it all out, no more lines of code in the file.");
-        } 
-        else if (e =2){
-            console.log(e + " lines of code in the file", e + " lines of code", friends[i] + " takes one out, clears it all out,", e-1 + " line of code in the file.")
-        }
-
-        else{
-            console.log(e + " lines of code in the file", e + " lines of code", friends[i] + " takes one out, clears it all out,", e-1 + " lines of code in the file.");
-        } 
-
-
-    } 
-    */
